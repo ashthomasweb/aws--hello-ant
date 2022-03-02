@@ -63,7 +63,7 @@ class SiderDemo extends Component {
               <Breadcrumb.Item>{this.state.user}</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-              This is a mock application built in the style of Horizon by SkySpecs.
+              This is a mock application built in style of an existing application using promotional material as a model.
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>UI built with Ant Design</Footer>

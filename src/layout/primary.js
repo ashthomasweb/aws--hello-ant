@@ -1,8 +1,9 @@
 
 import { React, Component } from 'react'
-import ReactDOM from 'react-dom'
 
-import { Layout, Menu, Breadcrumb, Button } from 'antd';
+import logo from '../assets/mill_logo.png'
+
+import { Layout, Menu, Breadcrumb } from 'antd';
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -32,8 +33,8 @@ class SiderDemo extends Component {
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider collapsible collapsed={collapsed} onCollapse={this.onCollapse}>
-          <div className="logo" />
-          <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
+          <div className="logo" ><img src={logo} alt='Windmill logo'/></div>
+          <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1" icon={<PieChartOutlined />} style={{ marginTop: '30px'}}>
               Option 1
             </Menu.Item>
@@ -62,11 +63,10 @@ class SiderDemo extends Component {
               <Breadcrumb.Item>{this.state.user}</Breadcrumb.Item>
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-              Bill is a cat.
+              This is a mock application built in the style of Horizon by SkySpecs.
             </div>
-            <Button className="circle-button" type="primary" shape="circle" size="large">Button</Button>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+          <Footer style={{ textAlign: 'center' }}>UI built with Ant Design</Footer>
         </Layout>
       </Layout>
     );
@@ -74,4 +74,5 @@ class SiderDemo extends Component {
 }
 
 export default SiderDemo
-// ReactDOM.render(<SiderDemo />);
+
+// END of document

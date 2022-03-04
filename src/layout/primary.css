@@ -1,23 +1,25 @@
 .logo {
-  height: 57px;
-  border-right: 1px solid #dfdfdf;
+  height: 50px;
   text-align: left;
   overflow: hidden;
 }
 
 .logo img {
-  margin: 6px 8px 0 14px;
-  height: 43px;
+  margin: 6px 3px 0 14px;
+  height: 33px;
   display: inline-block;
   vertical-align: middle;
+  transition: margin .2s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
+.collapsed-logo img {
+  margin-left: 19px; 
 }
 
 .text-logo {
-  width: 114px;
-  height: 40px!important;
+  width: 110px;
+  height: 33px!important;
   margin: 0px 0!important;
-  /* vertical-align: middle; */
   padding-top: 10px;
 }
 
@@ -31,8 +33,6 @@
 
 .ant-menu {
   border-top: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
-
   background-color: #f8f8f8;
   color: #656565;
   font-weight: 600;
@@ -47,11 +47,12 @@
   color: #656565!important;
 }
 
-.header {
+.frame-navigation {
   padding: 0;
   background-color: #fdfdfd;
   border-bottom: 1px solid #dfdfdf;
-  height: 58px;
+  border-top: 1px solid #dfdfdf;
+  height: 42px;
 }
 
 .ant-layout {
@@ -60,4 +61,63 @@
 
 .ant-layout-sider-trigger {
   background: #656565;
+  max-width: 180px;
+}
+
+h2.nav-selection-frame-title {
+  text-align: left;
+  margin: 9px 0 14px 14px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #656565;
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  letter-spacing: -.5px;
+}
+
+.user-info-display {
+  margin: 0;
+  text-align: right;
+  display: inline-block;
+  width: 48%;
+  position: relative;
+  padding: 0 14px 0 0;
+}
+
+.sidebar-frame {
+  min-width: 180px!important;
+  max-width: 180px!important;
+  flex: 0 0 180px!important;
+  border-right: 1px solid #dfdfdf;
+}
+
+.collapsed {
+  min-width: 80px!important;
+  max-width: 80px!important;
+  flex: 0 0 80px!important;
+}
+
+.ant-menu-inline .ant-menu-selected::after, .ant-menu-inline .ant-menu-item-selected::after {
+  display: none;
+}
+
+.ant-menu-inline.ant-menu-root .ant-menu-item, .ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  border-radius: 4px;
+  margin: 0 10px;
+  width: 90%;
+  padding-left: 14px!important;
+  transition: padding .4sec cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item {
+  border-radius: 4px;
+  width: 64px;
+  margin-left: 8px!important;
+  padding-left: 24px;
+}
+
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item .anticon {
+  font-size: 14px!important;
+  /* line-height: 1!important; */
 }

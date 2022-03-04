@@ -9,11 +9,11 @@
   height: 33px;
   display: inline-block;
   vertical-align: middle;
-  transition: margin .2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: margin .15s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .collapsed-logo img {
-  margin-left: 19px; 
+  margin-left: 20px; 
 }
 
 .text-logo {
@@ -98,26 +98,39 @@ h2.nav-selection-frame-title {
   flex: 0 0 80px!important;
 }
 
-.ant-menu-inline .ant-menu-selected::after, .ant-menu-inline .ant-menu-item-selected::after {
+.ant-menu-inline .ant-menu-item-selected::after {
   display: none;
 }
 
-.ant-menu-inline.ant-menu-root .ant-menu-item, .ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+.ant-menu-inline.ant-menu-root .ant-menu-item {
   border-radius: 4px;
   margin: 0 10px;
   width: 90%;
-  padding-left: 14px!important;
-  transition: padding .4sec cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding-left: 8px!important;
+  transition: padding .05s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .ant-menu.ant-menu-inline-collapsed > .ant-menu-item {
   border-radius: 4px;
-  width: 64px;
-  margin-left: 8px!important;
+  width: 61px;
+  margin-left: 10px!important;
   padding-left: 24px;
 }
 
 .ant-menu.ant-menu-inline-collapsed > .ant-menu-item .anticon {
   font-size: 14px!important;
-  /* line-height: 1!important; */
 }
+
+/* .ant-menu-vertical .ant-menu-item:not(:last-child) {
+} */
+
+.ant-menu-vertical .ant-menu-item:not(:last-child) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.ant-menu-vertical .ant-menu-item:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+

@@ -7,11 +7,10 @@ import textLogo from '../assets/text-logo.png'
 import { Layout, Menu, Breadcrumb, Typography } from 'antd';
 
 import {
-  DesktopOutlined,
+  EnvironmentOutlined,
   PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  // UserOutlined,
+  ScheduleOutlined,
+  ToolOutlined,
 } from '@ant-design/icons';
 
 import './primary.css'
@@ -42,16 +41,16 @@ class SiderDemo extends Component {
             {!this.state.collapsed && (<img className='text-logo' src={textLogo} alt='Skyline text logo'/>)}
           </div>
           <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
-            <Menu.Item key="1" icon={<TeamOutlined />} onClick={() => this.setState({currentPage: 'Fleet'})} style={{ marginTop: '10px'}}>
+            <Menu.Item key="1" icon={<EnvironmentOutlined />} onClick={() => this.setState({currentPage: 'Fleet'})} style={{ marginTop: '10px'}}>
               Fleet
             </Menu.Item>
-            <Menu.Item key="2" onClick={() => this.setState({currentPage: 'Inspections'})} icon={<DesktopOutlined />}>
+            <Menu.Item key="2" onClick={() => this.setState({currentPage: 'Inspections'})} icon={<ScheduleOutlined />}>
               Inspections
             </Menu.Item>
-            <Menu.Item key="10" onClick={() => this.setState({currentPage: 'Work Orders'})} icon={<PieChartOutlined />}>
+            <Menu.Item key="10" onClick={() => this.setState({currentPage: 'Work Orders'})} icon={<ToolOutlined />}>
               Work Orders
             </Menu.Item>
-            <Menu.Item key="9" onClick={() => this.setState({currentPage: 'Analytics'})} icon={<FileOutlined />}>
+            <Menu.Item key="9" onClick={() => this.setState({currentPage: 'Analytics'})} icon={<PieChartOutlined />}>
               Analytics
             </Menu.Item>
           </Menu>

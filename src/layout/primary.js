@@ -15,16 +15,14 @@ import {
 
 import './primary.css'
 
-
 const { Title } = Typography;
 const { Header, Content, Footer, Sider } = Layout;
-// const { SubMenu } = Menu;
 
 class SiderDemo extends Component {
   state = {
     collapsed: false,
     user: 'Ashley',
-    currentPage: 'Welcome',
+    currentPage: 'Dashboard',
   };
 
   onCollapse = collapsed => {
@@ -36,7 +34,7 @@ class SiderDemo extends Component {
     return (
       <Layout style={{ minHeight: '100vh' }}>
         <Sider className={`sidebar-frame ${this.state.collapsed && 'collapsed'}`} collapsible collapsed={collapsed} onCollapse={this.onCollapse} >
-          <div className={`logo ${this.state.collapsed && 'collapsed-logo'}`} >
+          <div onClick={() => this.setState({currentPage: 'Dashboard' })} className={`logo ${this.state.collapsed && 'collapsed-logo'}`} >
             <img src={logo} alt='Windmill logo'/>
             {!this.state.collapsed && (<img className='text-logo' src={textLogo} alt='Skyline text logo'/>)}
           </div>

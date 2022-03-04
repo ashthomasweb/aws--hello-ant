@@ -121,8 +121,6 @@ h2.nav-selection-frame-title {
   font-size: 14px!important;
 }
 
-/* .ant-menu-vertical .ant-menu-item:not(:last-child) {
-} */
 
 .ant-menu-vertical .ant-menu-item:not(:last-child) {
   margin-top: 0;

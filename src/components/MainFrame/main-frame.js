@@ -19,10 +19,10 @@ class MainFrame extends Component {
     render() {
         return (
         <AppContext.Consumer>
-            {({currentCUser, setCurrentCUser}) => {
+            {({currentCUser, setCurrentCUser, currentPage}) => {
                 return (
                 <Layout className="site-layout">
-                    <div><Title className="nav-selection-frame-title" level={2}>{this.state.currentPage}</Title>
+                    <div><Title className="nav-selection-frame-title" level={2}>{currentPage}</Title>
                     <Breadcrumb className="user-info-display">
                         <Breadcrumb.Item>User</Breadcrumb.Item>
                         <Breadcrumb.Item>{this.state.user}</Breadcrumb.Item>

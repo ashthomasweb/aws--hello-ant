@@ -20,7 +20,6 @@ const { Sider } = Layout;
 
 class SideBar extends Component {
 
-    
     state = {
         collapsed: false,
         user: 'Ashley',
@@ -35,25 +34,25 @@ class SideBar extends Component {
         const { collapsed } = this.state;
         return (
             <AppContext.Consumer>
-                {({currentCUser, setCurrentCUser}) => {
+                {({currentCUser, setCurrentCUser, setCurrentPage}) => {
                     return (
                         <>
                             <Sider className={`sidebar-frame ${this.state.collapsed && 'collapsed'}`} collapsible collapsed={collapsed} onCollapse={this.onCollapse} >
-                                <div onClick={() => this.setState({currentPage: 'Dashboard' })} className={`logo ${this.state.collapsed && 'collapsed-logo'}`} >
+                                <div onClick={() => setCurrentPage('Dashboard')} className={`logo ${this.state.collapsed && 'collapsed-logo'}`} >
                                     <img src={logo} alt='Windmill logo'/>
                                     {!this.state.collapsed && (<img className='text-logo' src={textLogo} alt='Skyline text logo'/>)}
                                 </div>
                                 <Menu theme="light" defaultSelectedKeys={['1']} mode="inline">
-                                    <Menu.Item key="1" icon={<EnvironmentOutlined />} onClick={() => this.setState({currentPage: 'Fleet'})} style={{ marginTop: '10px'}}>
+                                    <Menu.Item key="1" icon={<EnvironmentOutlined />} onClick={() => setCurrentPage('Fleet')} style={{ marginTop: '10px'}}>
                                     Fleet
                                     </Menu.Item>
-                                    <Menu.Item key="2" onClick={() => this.setState({currentPage: 'Inspections'})} icon={<ScheduleOutlined />}>
+                                    <Menu.Item key="2" onClick={() => setCurrentPage('Inspections')} icon={<ScheduleOutlined />}>
                                     Inspections
                                     </Menu.Item>
-                                    <Menu.Item key="10" onClick={() => this.setState({currentPage: 'Work Orders'})} icon={<ToolOutlined />}>
+                                    <Menu.Item key="10" onClick={() => setCurrentPage('Work Orders')} icon={<ToolOutlined />}>
                                     Work Orders
                                     </Menu.Item>
-                                    <Menu.Item key="9" onClick={() => this.setState({currentPage: 'Analytics'})} icon={<PieChartOutlined />}>
+                                    <Menu.Item key="9" onClick={() => setCurrentPage('Analytics')} icon={<PieChartOutlined />}>
                                     Analytics
                                     </Menu.Item>
                                 </Menu>

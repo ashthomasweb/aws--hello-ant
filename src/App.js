@@ -1,13 +1,20 @@
+import React, { useState } from 'react';
 
 import './App.css';
 
-import SiderDemo from './layout/primary.js'
+import SiderDemo from './components/layout/primary.js'
+
+export const AppContext = React.createContext()
 
 function App() {
+  const [currentCUser, setCurrentCUser] = useState('Ashley T')
+
   return (
-    <div className="App">
-      <SiderDemo />
-    </div>
+    <AppContext.Provider value={{currentCUser, setCurrentCUser}}>
+      <div className="App">
+        <SiderDemo />
+      </div>
+    </AppContext.Provider>
   );
 }
 

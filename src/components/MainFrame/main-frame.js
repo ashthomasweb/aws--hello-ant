@@ -30,7 +30,7 @@ class MainFrame extends Component {
                     <Header className="frame-navigation" />
                     <Content style={{ margin: '0 16px' }}>
                     <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
-                        This is a mock application being built in the style of an existing application, using promotional material as a model. Now with Context. 
+                        This is a mock application being built in the style of an existing application, using promotional material as a model. Now with Context and basic Hooks.
                     </div>
                     <Button onClick={() => console.log(currentCUser)}>{currentCUser}</Button>
                     <Button onClick={() => setCurrentCUser(() => Math.random())}>Change</Button>

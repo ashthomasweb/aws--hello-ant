@@ -52,7 +52,11 @@
   background-color: #fdfdfd;
   border-bottom: 1px solid #dfdfdf;
   border-top: 1px solid #dfdfdf;
-  height: 42px;
+  height: 63px;
+}
+
+.frame-navigation > element {
+  margin: 0 10px;
 }
 
 .ant-layout {

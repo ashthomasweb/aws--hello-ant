@@ -39,11 +39,8 @@ const MainFrame = () => {
                 <Footer style={{ textAlign: 'center' }}>UI built with Ant Design</Footer>
             </Layout>
         </MainState>
-
     )
 }
-
-
 
 export default MainFrame
 

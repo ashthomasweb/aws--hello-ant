@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SiderDemo from './components/layout/primary.js'
+import PrimaryLayout from './components/layout/primary-layout.js'
 import MainState from './context/application/MainState';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <MainState>
       <div className="App">
-        <SiderDemo />
+        <PrimaryLayout />
       </div>
     </MainState>
   );

@@ -1,7 +1,7 @@
 import { React, Component } from 'react'
 import { Layout } from 'antd';
 import MainFrame from '../main-frame/main-frame.js'
-import SideBar from '../sidebar/sidebar'
+import SideBar from '../sidebar/sidebar.js'
 import './primary-layout.css'
 
 class SiderDemo extends Component {

@@ -10,11 +10,11 @@ import {
     ScheduleOutlined,
     ToolOutlined,
 } from '@ant-design/icons';
-import './sidebar.css'
+import './side-menu.css'
 
 const { Sider } = Layout;
 
-const SideBar = () => {
+const SideMenu = () => {
       
     const { state: {collapsed}, dispatch } = useContext(MainContext)
 
@@ -42,6 +42,6 @@ const SideBar = () => {
     )
 }
 
-export default SideBar
+export default SideMenu
 
 // END of document

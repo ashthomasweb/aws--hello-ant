@@ -27,7 +27,7 @@ export const AttRequired = () => {
         <>
             {tags.map(tag => {
             let color = tag.length > 5 ? 'geekblue' : 'green';
-            if (tag === 'loser') {
+            if (tag === 'cancelled') {
                 color = 'volcano';
             }
             return (
@@ -64,7 +64,7 @@ export const AttRequired = () => {
         name: 'Jim Green',
         age: 42,
         address: 'London No. 1 Lake Park',
-        tags: ['loser'],
+        tags: ['cancelled'],
     },
     {
         key: '3',

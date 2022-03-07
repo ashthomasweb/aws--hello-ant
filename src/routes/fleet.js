@@ -12,7 +12,7 @@ export const Fleet = () => {
         <Header className="frame-navigation" >
             {/* <Link to="/expenses">Expenses</Link>
             <Link style={{margin: '0 0 0 10px' }} to="/invoices">Invoices</Link> */}
-            <Button style={{margin: '0 10px'}} onClick={() => console.log(user)}>{user}</Button>
+            <Button style={{margin: '0 10px'}} onClick={() => console.log(user)}>log: {user}</Button>
             <Button onClick={() => dispatch({ type: 'SET_USER', payload: 'Ash'} )}>Change</Button>
         </Header>
         <Content style={{ margin: '0 16px' }}>
@@ -26,4 +26,3 @@ export const Fleet = () => {
 }
 
 // END of document
-

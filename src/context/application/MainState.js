@@ -5,7 +5,8 @@ export const MainContext = createContext()
 
 const MainState = (props) => {
     const initialState = {
-        user: 'Guest',
+        user: 'Admin',
+        dataSet: 'Cal',
         userPerm: 1,
         message: 'Welcome',
         currentPage: 'Dashboard',

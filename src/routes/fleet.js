@@ -18,7 +18,7 @@ export const Fleet = () => {
         <Content style={{ margin: '0 16px' }}>
         <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
             This is a mock application being built in the style of an existing application, using promotional material as a model.<br/><br/>
-            Now with Context, BrowserRouter, a Reducer, and a cleanly packaged Provider/Consumer component.
+            Now with BrowserRouter, a Reducer, and a cleanly packaged Context component.
         </div>
         </Content>
         </>

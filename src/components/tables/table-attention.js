@@ -1,24 +1,28 @@
+import { MainContext } from '../../context/application/MainState';
 import { Table, Tag, Space } from 'antd';
 import './table-attention.css'
+import { useContext } from 'react';
 
 export const AttRequired = () => {
 
+    const { state: {userPerm, dataSet}} = useContext(MainContext)
+
     const columns = [
     {
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name',
+        title: 'Site',
+        dataIndex: 'site',
+        key: 'site',
         render: text => <a>{text}</a>,
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age',
+        title: 'Turbines',
+        dataIndex: 'turbines',
+        key: 'turbines',
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address',
+        title: 'Repairs',
+        dataIndex: 'repairs',
+        key: 'repairs',
     },
     {
         title: 'Tags',
@@ -28,8 +32,14 @@ export const AttRequired = () => {
         <>
             {tags.map(tag => {
             let color = tag.length > 5 ? 'geekblue' : 'green';
-            if (tag === 'cancelled') {
+            if (tag === 'on hold') {
                 color = 'volcano';
+            }
+            if (tag === 'needs update') {
+                color = 'pink';
+            }
+            if (tag === 'operational') {
+                color = 'green';
             }
             return (
                 <Tag color={color} key={tag}>
@@ -52,32 +62,56 @@ export const AttRequired = () => {
     },
     ];
 
-    const data = [
-    {
-        key: '1',
-        name: 'John Brown',
-        age: 32,
-        address: 'New York No. 1 Lake Park',
-        tags: ['nice', 'developer'],
-    },
-    {
-        key: '2',
-        name: 'Jim Green',
-        age: 42,
-        address: 'London No. 1 Lake Park',
-        tags: ['cancelled'],
-    },
-    {
-        key: '3',
-        name: 'Joe Black',
-        age: 32,
-        address: 'Sidney No. 1 Lake Park',
-        tags: ['cool', 'teacher'],
-    },
+    const californiaData = [
+        {
+            key: '1',
+            site: 'Fresno Hills',
+            turbines: 134,
+            repairs: 23,
+            tags: ['operational', 'needs update'],
+        },
+        {
+            key: '2',
+            site: 'Yosemite Region',
+            turbines: 42,
+            repairs: 2,
+            tags: ['operational'],
+        },
+        {
+            key: '3',
+            site: 'Merced Valley',
+            turbines: 75,
+            repairs: 45,
+            tags: ['on hold', 'needs update'],
+        },
+    ];
+
+    const oregonData = [
+        {
+            key: '1',
+            site: 'Portland Heights',
+            turbines: 34,
+            repairs: 23,
+            tags: ['on hold'],
+        },
+        {
+            key: '2',
+            site: 'Bend District',
+            turbines: 342,
+            repairs: 28,
+            tags: ['operational'],
+        },
+        {
+            key: '3',
+            site: 'Southern Region',
+            turbines: 35,
+            repairs: 15,
+            tags: ['operational', 'needs update'],
+        },
     ];
 
     return (
-        <Table className='attention-table' columns={columns} dataSource={data} />
+        userPerm === 1 && <Table className='attention-table' columns={columns} dataSource={dataSet === 'Cal' ? californiaData : oregonData } />
         )
 
 }

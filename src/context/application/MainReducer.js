@@ -13,12 +13,15 @@ export const mainReducer = (state, action) => {
             }
         case "SET_USER":
             let userPerm
+            let dataSet
             switch (action.payload) {
                 case "California Wind Farms":
                     userPerm = 1
+                    dataSet = 'Cal'
                     break
                 case "Oregon Renewables":
                     userPerm = 1
+                    dataSet = 'Ore'
                     break
                 default:
                     userPerm = 0 
@@ -26,7 +29,8 @@ export const mainReducer = (state, action) => {
             return {
                 ...state,
                 user: action.payload,
-                userPerm: userPerm
+                userPerm: userPerm,
+                dataSet: dataSet
             }
         default:
             return state

@@ -1,4 +1,5 @@
 import { Table, Tag, Space } from 'antd';
+import './table-attention.css'
 
 export const AttRequired = () => {
 
@@ -76,7 +77,7 @@ export const AttRequired = () => {
     ];
 
     return (
-        <Table columns={columns} dataSource={data} />
+        <Table className='attention-table' columns={columns} dataSource={data} />
         )
 
 }

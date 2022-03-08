@@ -1,3 +1,4 @@
+
 export const mainReducer = (state, action) => {
     switch (action.type) {
         case "SET_PAGETITLE":
@@ -11,9 +12,21 @@ export const mainReducer = (state, action) => {
                 collapsed: !state.collapsed
             }
         case "SET_USER":
+            let userPerm
+            switch (action.payload) {
+                case "California Wind Farms":
+                    userPerm = 1
+                    break
+                case "Oregon Renewables":
+                    userPerm = 1
+                    break
+                default:
+                    userPerm = 0 
+            }
             return {
                 ...state,
-                user: action.payload
+                user: action.payload,
+                userPerm: userPerm
             }
         default:
             return state

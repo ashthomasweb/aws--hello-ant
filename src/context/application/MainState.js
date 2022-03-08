@@ -6,15 +6,17 @@ export const MainContext = createContext()
 const MainState = (props) => {
     const initialState = {
         user: 'Guest',
+        userPerm: 1,
         message: 'Welcome',
         currentPage: 'Dashboard',
         collapsed: false,
     }
 
     const [state, dispatch] = useReducer(mainReducer, initialState)
+    const value = { state, dispatch}
 
     return (
-        <MainContext.Provider value={{state, dispatch}}>
+        <MainContext.Provider value={value}>
             {props.children}
         </MainContext.Provider>
     )
